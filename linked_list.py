@@ -47,3 +47,13 @@ class LinkedList:
         """Delete item from tail."""
         self.tail.previous = self.tail
         self.tail.next = None
+
+    def find(self, item):
+        """Find specific item in list."""
+        current = self.head
+        while current is not None:
+            if current == item:
+                return True
+            elif current != item:
+                current = current.next
+        return False
